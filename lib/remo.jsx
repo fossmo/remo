@@ -17,6 +17,9 @@ class Remo extends React.Component {
 
   componentDidUnMount(){
     this.node.removeEventListener('click', this.hideModal, false);
+    let node = document.getElementsByClassName('RemoOverlay')[0];
+     this.refs.rmod.getDOMNode().style.display = 'none';
+     node.style.display = 'none';
   }
 
   componentWillReceiveProps(newProps){

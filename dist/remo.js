@@ -46,6 +46,9 @@ var Remo = (function (_React$Component) {
     key: 'componentDidUnMount',
     value: function componentDidUnMount() {
       this.node.removeEventListener('click', this.hideModal, false);
+      var node = document.getElementsByClassName('RemoOverlay')[0];
+      this.refs.rmod.getDOMNode().style.display = 'none';
+      node.style.display = 'none';
     }
   }, {
     key: 'componentWillReceiveProps',
