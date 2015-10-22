@@ -7,10 +7,10 @@ class Remo extends React.Component {
     document.body.appendChild(this.node);
     this.node.addEventListener("click", this.hideModal.bind(this), false);
     if (this.props.isOpen) {
-      this.refs.rmod.style.display = 'inline';
+      this.refs.rmod.getDOMNode().style.display = 'inline';
       this.node.style.display = 'inline';
     } else {
-      this.refs.rmod.style.display = 'none';
+      this.refs.rmod.getDOMNode().style.display = 'none';
       this.node.style.display = 'none';
     }
   }
@@ -22,17 +22,17 @@ class Remo extends React.Component {
   componentWillReceiveProps(newProps){
     let node = document.getElementsByClassName('RemoOverlay')[0];
     if(newProps.isOpen){
-      this.refs.rmod.style.display = 'inline';
+      this.refs.rmod.getDOMNode().style.display = 'inline';
       node.style.display = 'inline';
     } else {
-      this.refs.rmod.style.display = 'none';
+      this.refs.rmod.getDOMNode().style.display = 'none';
       node.style.display = 'none';
     }
   }
 
   hideModal() {
     this.node.style.display = 'none';
-    this.refs.rmod.style.display = 'none';
+    this.refs.rmod.getDOMNode().style.display = 'none';
   }
 
   render () {
