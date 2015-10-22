@@ -2,7 +2,7 @@
   "name": "remo",
   "version": "0.0.1",
   "description": "An easy to use modal dialog for ReactJS",
-  "main": "index.js",
+  "main": "lib/remo.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,7 @@
     "dialog"
   ],
   "author": "Pål Fossmo",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fossmo/remo/issues"
   },
