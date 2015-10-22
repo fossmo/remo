@@ -1,0 +1,24 @@
+{
+  "name": "remo",
+  "version": "0.0.1",
+  "description": "An easy to use modal dialog for ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fossmo/remo.git"
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "dialog"
+  ],
+  "author": "Pål Fossmo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fossmo/remo/issues"
+  },
+  "homepage": "https://github.com/fossmo/remo#readme"
+}
