@@ -5,37 +5,32 @@ class Remo extends React.Component {
     this.node = document.createElement('div');
     this.node.className = 'RemoOverlay';
     document.body.appendChild(this.node);
+    this.toggleModal(this.props.isOpen);
     this.node.addEventListener("click", this.hideModal.bind(this), false);
-    if (this.props.isOpen) {
-      this.refs.rmod.getDOMNode().style.display = 'inline';
-      this.node.style.display = 'inline';
-    } else {
-      this.refs.rmod.getDOMNode().style.display = 'none';
-      this.node.style.display = 'none';
-    }
   }
 
-  componentDidUnMount(){
-    this.node.removeEventListener('click', this.hideModal, false);
-    let node = document.getElementsByClassName('RemoOverlay')[0];
-     this.refs.rmod.getDOMNode().style.display = 'none';
-     node.style.display = 'none';
+  componentWillUnmount(){
+    this.node.removeEventListener('click', this.hideModal.bind(this), false);
+    document.body.removeChild(this.node);
   }
 
   componentWillReceiveProps(newProps){
-    let node = document.getElementsByClassName('RemoOverlay')[0];
-    if(newProps.isOpen){
-      this.refs.rmod.getDOMNode().style.display = 'inline';
-      node.style.display = 'inline';
-    } else {
-      this.refs.rmod.getDOMNode().style.display = 'none';
-      node.style.display = 'none';
-    }
+    this.toggleModal(newProps.isOpen);
   }
 
   hideModal() {
-    this.node.style.display = 'none';
-    this.refs.rmod.getDOMNode().style.display = 'none';
+    this.toggleModal(false);
+  }
+
+  toggleModal(isOpen){
+    let displayStyle = 'none';
+    if (isOpen) { displayStyle = 'inline'; }
+    if(parseFloat(React.version) >= 0.14){
+      this.refs.rmod.style.display = displayStyle;
+    } else{
+      this.refs.rmod.getDOMNode().style.display = displayStyle;
+    }
+    this.node.style.display = displayStyle;
   }
 
   render () {
@@ -45,9 +40,8 @@ class Remo extends React.Component {
   }
 };
 
-  Remo.propTypes = {
-    isOpen: React.PropTypes.bool.isRequired
-  };
+Remo.propTypes = {
+  isOpen: React.PropTypes.bool.isRequired
+};
 
 export default Remo
-
