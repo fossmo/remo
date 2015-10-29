@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var less = require('less-loader');
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     app: ["./examples/index.jsx"]
   },
