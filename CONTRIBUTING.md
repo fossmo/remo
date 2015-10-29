@@ -16,3 +16,11 @@ fix a bug and doesn't change the public API.
 
 - `npm start` starts the development server (webpack-dev-server on port 8080).
 - `npm build` builds a release and adds it to the dist folder.
+
+## Generate changelog
+
+Run from project folder:
+
+    git tag -a v0.1.0 -m 'Version 0.1.0'   
+    git commit lib/remo.jsx -m "[added] I did stuff.."
+    ./node_modules/.bin/changelog -t v0.1.0     
