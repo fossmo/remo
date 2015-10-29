@@ -1,3 +1,14 @@
+v0.1.1 - Thu, 29 Oct 2015 19:40:08 GMT
+--------------------------------------
+
+- [0703f81](../../commit/0703f81) [changed] contributing file
+- [46eee20](../../commit/46eee20) [removed] example css file. Using less instead.
+- [f32194b](../../commit/f32194b) [changed] example project
+- [d379842](../../commit/d379842) [changed] webpack file to support less
+- [2057051](../../commit/2057051) [changed] example.css to example.less
+- [da1910a](../../commit/da1910a) [added] License file
+
+
 v0.1.0 - Tue, 27 Oct 2015 20:44:23 GMT
 --------------------------------------
 
