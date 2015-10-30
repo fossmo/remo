@@ -22,9 +22,6 @@
     "url": "https://github.com/fossmo/remo/issues"
   },
   "homepage": "https://github.com/fossmo/remo#readme",
-  "dependencies": {
-    "react": "^0.14.0"
-  },
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",
