@@ -1,5 +1,5 @@
 {
-  "name": "remo",
+  "name": "remojs",
   "version": "0.1.0",
   "description": "An easy to use modal dialog for ReactJS",
   "main": "lib/remo.js",
@@ -16,7 +16,7 @@
     "modal",
     "dialog"
   ],
-  "author": "Pål Fossmo",
+  "author": "Pål Fossmo <pal@fossmo.net> (www.proglab.no)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fossmo/remo/issues"
