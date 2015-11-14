@@ -1,6 +1,6 @@
 {
   "name": "remojs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An easy to use modal dialog for ReactJS",
   "main": "lib/remo.js",
   "scripts": {
