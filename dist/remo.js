@@ -18,6 +18,15 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+/*
+ * RemoJS is a simple to use modal dialog for ReactJS.
+ *
+ * To use it, import the module and add the following to your code:
+ * <Remo isOpen={true}>Content of modal.</Remo>
+ * Style the dialog and overlay by changing the RemoModal and
+ * RemoOverlay class in your CSS file.
+ */
+
 var Remo = (function (_React$Component) {
   _inherits(Remo, _React$Component);
 
@@ -29,6 +38,12 @@ var Remo = (function (_React$Component) {
 
   _createClass(Remo, [{
     key: 'componentDidMount',
+
+    /*
+     * The overlay will be added to the body element of the page.
+     * If you want to edit how the overlay looks, add RemoOverlay
+     * to your CSS file. The overlay attaches to the body element.
+     */
     value: function componentDidMount() {
       this.node = document.createElement('div');
       this.node.className = 'RemoOverlay';
@@ -52,6 +67,12 @@ var Remo = (function (_React$Component) {
     value: function hideModal() {
       this.toggleModal(false);
     }
+
+    /*
+     * By default the modal is hidden.
+     *
+     * @param {bool} isOpen Hides or shows the dialog.
+     */
   }, {
     key: 'toggleModal',
     value: function toggleModal(isOpen) {
@@ -66,6 +87,10 @@ var Remo = (function (_React$Component) {
       }
       this.node.style.display = displayStyle;
     }
+
+    /*
+     * To style the modal change the RemoModal class.
+     */
   }, {
     key: 'render',
     value: function render() {
