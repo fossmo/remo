@@ -16,6 +16,7 @@ fix a bug and doesn't change the public API.
 
 - `npm start` starts the development server (webpack-dev-server on port 8080).
 - `npm build` builds a release and adds it to the dist folder.
+- `npm test` runs unit tests.
 
 ## Generate changelog
 
