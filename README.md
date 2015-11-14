@@ -1,6 +1,6 @@
 # REMO - a modal dialog for ReactJS
 
-![](https://github.com/fossmo/remo/blob/master/remojs.gif)
+![](https://raw.githubusercontent.com/fossmo/remo/master/remojs.gif)
 
 ## Usage
 
