@@ -25,3 +25,17 @@ Run from project folder:
     git tag -a v0.1.0 -m 'Version 0.1.0'   
     git commit lib/remo.jsx -m "[added] I did stuff.."
     ./node_modules/.bin/changelog -t v0.1.0     
+
+## Deploy to npmjs.org
+
+If you haven't already set your NPM author info, now you should:
+
+    npm set init.author.name "Your Name"
+    npm set init.author.email "you@example.com"
+    npm set init.author.url "http://yourblog.com"
+
+    npm adduser
+
+Then publish with:
+
+    npm publish ./
