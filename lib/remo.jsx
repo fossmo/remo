@@ -31,10 +31,16 @@ class Remo extends React.Component {
 
   componentWillReceiveProps(newProps){
     this.toggleModal(newProps.isOpen);
+     this.refs.rmod.focus();
   }
 
   hideModal() {
     this.toggleModal(false);
+  }
+
+  handleKeyDown(event){
+    if (event.keyCode == 27 /*esc*/) this.hideModal();
+    if (event.keyCode == 9 /*tab*/) this.hideModal();
   }
 
    /*
@@ -57,9 +63,12 @@ class Remo extends React.Component {
     * To style the modal change the RemoModal class.
     */
   render () {
-    return <div className="RemoModal" ref="rmod">
-      {this.props.children}
-    </div>;
+    return React.DOM.div({
+      className: "RemoModal",
+      ref: "rmod",
+      tabIndex: "-1",
+      onKeyDown: this.handleKeyDown.bind(this)
+    }, this.props.children);
   }
 };
 
