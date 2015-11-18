@@ -1,5 +1,7 @@
 # REMO - a modal dialog for ReactJS
 
+[![Circle CI](https://circleci.com/gh/fossmo/remo/tree/master.svg?style=svg)](https://circleci.com/gh/fossmo/remo/tree/master)
+
 ![](https://raw.githubusercontent.com/fossmo/remo/master/remojs.gif)
 
 ## Usage
