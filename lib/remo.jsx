@@ -10,6 +10,29 @@ import React, { PropTypes } from 'react'
   */
 
 class Remo extends React.Component {
+  constructor(){
+    super();
+
+    this.defaultStyles = {
+      remomodal: {
+        position                : 'fixed',
+        width                   : '300px',
+        height                  : '200px',
+        marginTop               : '-150px',
+        marginLeft              : '-180px',
+        top                     : '50%',
+        left                    : '50%',
+        background              : '#fff',
+        overflow                : 'auto',
+        WebkitOverflowScrolling : 'touch',
+        borderRadius            : '5px',
+        outline                 : 'none',
+        zIndex                  : '11',
+        padding                 : '30px',
+        textAlign               : 'center'
+      }
+    };
+  }
 
    /*
     * The overlay will be added to the body element of the page.
@@ -59,6 +82,7 @@ class Remo extends React.Component {
     this.node.style.display = displayStyle;
   }
 
+
    /*
     * To style the modal change the RemoModal class.
     */
@@ -67,13 +91,15 @@ class Remo extends React.Component {
       className: "RemoModal",
       ref: "rmod",
       tabIndex: "-1",
+      style: (this.props.useInlineStyle?this.defaultStyles.remomodal:{}),
       onKeyDown: this.handleKeyDown.bind(this)
     }, this.props.children);
   }
 };
 
 Remo.propTypes = {
-  isOpen: React.PropTypes.bool.isRequired
+  isOpen: React.PropTypes.bool.isRequired,
+  useInlineStyle: React.PropTypes.bool.isRequired
 };
 
 export default Remo
