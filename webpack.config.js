@@ -25,6 +25,16 @@ module.exports = {
     },
     { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
     {
+    test: /\.jpg$/,
+    loader: "url-loader",
+    query: { mimetype: "image/jpg" }
+    },
+    {
+    test: /\.png$/,
+    loader: "url-loader",
+    query: { mimetype: "image/png" }
+    },
+    {
       test: /\.jsx$/,
       loaders: ['react-hot', 'babel'],
       exclude: /node_modules/,
