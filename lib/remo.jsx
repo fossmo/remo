@@ -4,7 +4,7 @@ import React, { PropTypes } from 'react'
   * RemoJS is a simple to use modal dialog for ReactJS.
   *
   * To use it, import the module and add the following to your code:
-  * <Remo isOpen={true}>Content of modal.</Remo>
+  * <Remo isOpen={true} useInlineStyle={false}>Content of modal.</Remo>
   * Style the dialog and overlay by changing the RemoModal and
   * RemoOverlay class in your CSS file.
   */
