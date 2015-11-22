@@ -15,14 +15,32 @@ class ExampleApp extends React.Component{
     return <div>
       <div className='btn centerbtn pulse' onClick={this.handleOpenModalClick.bind(this)}>Open modal</div>
       <Remo isOpen={this.state.isOpen} useInlineStyle={false} >
-        <div className="modalHeader">RemoJS - a simple to use modal dialog.</div>
+        <div className="modalHeader">RemoJS - a simple modal dialog</div>
         <div className="closebtn" onClick={this.handleCloseModalClick.bind(this)}></div>
         <div className="modalContent">
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          <h4>Made for ReactJS</h4>
+          <p>
+            ReactJS is a great Javascript library. Components are the future of web development,
+            and ReactJS makes creating components a breeze. You can create self-contained,
+            customizable elements that you can import and use in your projects.
+            RemoJS tries to be a component that fits into this description.
+          </p>
+
+          <h4>Functionality</h4>
+          <p>
+            The dialog can be closed by pressing the ESC or TAB key.
+            It can also be closed by clicking on the overlay behind the dialog.
+            If you want a close button inside the dialog, look at the code of this
+            example to learn how to do that.
+          </p>
+
+          <h4>Background image</h4>
+          <p>
+            The background image used in this example was found at https://unsplash.com/.
+            The image is taken by Patrick Hendry.
+          </p>
+          <a href="#page2" className="link">Link to another page for testing purpose.</a>
         </div>
-        <a href="#page2" className="link">Link to another page</a>
       </Remo>
     </div>;
   }
